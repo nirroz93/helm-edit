@@ -2,7 +2,7 @@
 
 set -euf -o pipefail
 DEFAULT_VERSION="0.4.0"
-if [[ $(helm version --short | head -c2) -eq "v2" ]]; then
+if [[ $(helm version --short | head -c2) == "v2" ]]; then
   echo "This plugin version support only Helm 3. Defaulting to previous version"
   DEFAULT_VERSION="0.3.0"
 fi
